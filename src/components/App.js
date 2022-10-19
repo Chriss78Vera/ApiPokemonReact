@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Personal from "./Pages/Personal";
 import Contacts from "./Pages/Contacts";
 import Home from "./Pages/Home";
+import PokemonsDetails from "./Pages/PokemonsDetails";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <Routes>
         <Route path="/about" element={<Personal />}></Route>
         <Route path="/contact" element={<Contacts />}></Route>
+
+        <Route path="/details/:namePokemons" element={<PokemonsDetails />}></Route>
+
         <Route path="/" element={<Home />}></Route>
       </Routes>
     </Router>

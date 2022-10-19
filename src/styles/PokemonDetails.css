@@ -1,0 +1,33 @@
+.pokemonRow{
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.pokemonimage{
+    width: 20rem;
+}
+.pokemonContainerText{
+    width: 20rem;
+    text-transform: capitalize;
+    margin-top: 50px;
+}
+.pokemonContainerFormat{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.pokemonContainerFormatTable{
+    margin-bottom: 20px;
+}
+.pokemonTextTransform{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 20px;
+    font-size: 15px;
+}
+.pokemonContainerTable{   
+    text-align: center;
+    margin-top: 50px;
+}
+.pokemonCenter{ text-align: center;
+}
