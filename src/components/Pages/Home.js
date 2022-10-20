@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import NavigationBar from "../Elements/Navbar";
 import { PokemonApi } from "../API/PokemonApi";
 import PokemonList from "../PokemonCards/PokemonList";
-import { Button, Container } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 const Home = () => {
-  const [url, setUrl] = React.useState("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0");
+  const [url, setUrl] = React.useState(
+    "https://pokeapi.co/api/v2/pokemon?limit=9&offset=0"
+  );
   const stateAxios = PokemonApi(url);
   const { state, data } = stateAxios;
   return (
@@ -17,25 +19,29 @@ const Home = () => {
         {state ? (
           <h1>Cargando....</h1>
         ) : (
-          <Container>
+          <Container style={{ marginTop: "20px" }}>
             <PokemonList results={data.results} />
-            <Container className="m-auto">
-              <div className="mb-2">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  onClick={() => setUrl(data.previous)}
-                >
-                  Large button
-                </Button>
-                <Button
-                  onClick={() => setUrl(data.next)}
-                  variant="secondary"
-                  size="lg"
-                >
-                  Large button
-                </Button>
-              </div>
+            <Container className="m-auto" style={{ paddingBottom: "20px" }}>
+              <Row>
+                <Col>
+                  <Button
+                    variant="dark"
+                    size="lg"
+                    onClick={() => setUrl(data.previous)}
+                  >
+                    PREVIOUS
+                  </Button>
+                </Col>
+                <Col>
+                  <Button
+                    onClick={() => setUrl(data.next)}
+                    variant="dark"
+                    size="lg"
+                  >
+                    NEXT
+                  </Button>
+                </Col>
+              </Row>
             </Container>
           </Container>
         )}

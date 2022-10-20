@@ -1,12 +1,15 @@
+import { Image } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import logo from "../../images/logo.png"
 function NavigationBar() {
   return (
     <Navbar expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/">PokemonApi</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <Image style={{width: "15rem", height: "3.5rem"}}src={logo}></Image>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
           className="justify-content-end"

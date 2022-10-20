@@ -5,9 +5,11 @@ import PokemonCards from "./PokemonCard";
 const PokemonList = ({ results }) => {
   return (
     <Container style={{ justifyContent: "center", alignItems: "center" }}>
-      <Container style={{justifyContent: "center", alignItems: "center"}}>
+      <Container style={{ justifyContent: "center", alignItems: "center" }}>
         <h1>Pokemon Challenge</h1>
-        <SearchBar />
+        <Container style={{ marginBottom: "50px", marginTop: "20px"}}>
+          <SearchBar />
+        </Container>
       </Container>
       <Row>
         {results.map((p) => (

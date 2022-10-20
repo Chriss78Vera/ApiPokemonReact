@@ -2,6 +2,7 @@ import React from "react";
 import NavigationBar from "../Elements/Navbar";
 import { Link, useParams } from "react-router-dom";
 import { GetPokemonDetails } from "../API/PokemonApi";
+import { BsStarFill } from "react-icons/bs";
 import {
   Alert,
   Button,
@@ -13,23 +14,38 @@ import {
   Table,
 } from "react-bootstrap";
 import "../../styles/PokemonDetails.css";
+import { PokemonPostApi } from "../API/mongoApi";
 const PokemonsDetails = () => {
   const { namePokemons } = useParams();
   const pokemonDetails = GetPokemonDetails(namePokemons);
   const { state, data } = pokemonDetails;
+  const [postStatus, setPostStatus] = React.useState();
+  const postDataPokemon = async () => {
+    let dataPokemon = [
+      {
+        name: data.name,
+        _id: data.id,
+        id: data.id,
+        front_default: data.sprites.other.home.front_default,
+        height: data.height,
+        weight: data.weight,
+        description: `https://pokeapi.co/api/v2/pokemon/${data.name}`,
+      },
+    ];
+    await PokemonPostApi(dataPokemon);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <NavigationBar />
       </header>
+
       <Container>
         {state ? (
-          <Alert variant={"danger"}>
-            Pokemon was not found!
-            <Link variant="primary" to={"/"}>
-              <Button variant="primary">Back</Button>
-            </Link>
-          </Alert>
+          <Container style={{ marginTop: "4rem" }}>
+            <Alert variant={"danger"}>Pokemon was not found!</Alert>
+          </Container>
         ) : (
           <Container>
             <Row className="pokemonRow">
@@ -44,10 +60,35 @@ const PokemonsDetails = () => {
               <Col sm={"auto"} xs={"auto"} md={"auto"}>
                 <Container className="pokemonContainerText">
                   <Container>
-                    <h2>{data.name}</h2>
-                    <div>
-                      <h5>Type: {data.types[0].type.name}</h5>
-                    </div>
+                    <Row>
+                      <Col>
+                        <h2>{data.name}</h2>
+                      </Col>
+                      <Col>
+                        <BsStarFill
+                          onClick={() => {
+                            if (!postDataPokemon()) {
+                              setPostStatus(true);
+                              console.log(postStatus)
+                            } else {
+                              setPostStatus(false);
+                              console.log(postStatus)
+                            }
+                          }}
+                          style={{ color: "yellow", fontSize: "30px" }}
+                        />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col>
+                        <h5>Type:</h5>
+                      </Col>
+                      {data.types.map((p) => (
+                        <Col>
+                          <h5>{p.type.name}</h5>
+                        </Col>
+                      ))}
+                    </Row>
                   </Container>
                   <Container className="pokemonContainerFormat">
                     <Container className="pokemonContainerFormatTable">
@@ -111,7 +152,9 @@ const PokemonsDetails = () => {
             </Container>
             <Container className="pokemonCenter">
               <Link variant="primary" to={-1}>
-                <Button variant="primary">Back</Button>
+                <Button variant="dark" style={{ width: "20rem" }}>
+                  Back
+                </Button>
               </Link>
             </Container>
           </Container>

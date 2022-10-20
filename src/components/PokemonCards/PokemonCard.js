@@ -28,12 +28,12 @@ function PokemonCards({ url }) {
                 variant="top"
                 src={data.sprites.other.home.front_default}
               />
-              <Card.Title style={{ backgroundColor: "red",textTransform:'capitalize' }}>
+              <Card.Title style={{textTransform:'capitalize' }}>
                 {data.name}
               </Card.Title>
               <Card.Text></Card.Text>
               <Link variant="primary" to={`/details/${data.name}`}>
-                <Button variant="primary">Details</Button>
+                <Button variant="dark">DETAILS</Button>
               </Link>
             </Card.Body>
           </Card>

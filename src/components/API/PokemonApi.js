@@ -58,6 +58,7 @@ export const GetPokemonDetails = (namePokemon) => {
       .get()
       .then((response) => {
         setPokemonDetails({ state: false, data: response.data });
+        
       })
       .catch(function (error) {
         if (error.response) {
