@@ -19,17 +19,18 @@ const Home = () => {
         {state ? (
           <h1>Cargando....</h1>
         ) : (
-          <Container style={{ marginTop: "20px" }}>
+          <Container style={{ marginTop: "20px"}}>
             <PokemonList results={data.results} />
-            <Container className="m-auto" style={{ paddingBottom: "20px" }}>
+            <Container className="m-auto" style={{ paddingBottom: "20px"}}>
               <Row>
                 <Col>
                   <Button
                     variant="dark"
                     size="lg"
+                    style={{ fontWeight: "bold" }}
                     onClick={() => setUrl(data.previous)}
                   >
-                    PREVIOUS
+                    Previous
                   </Button>
                 </Col>
                 <Col>
@@ -37,8 +38,9 @@ const Home = () => {
                     onClick={() => setUrl(data.next)}
                     variant="dark"
                     size="lg"
+                    style={{ fontWeight: "bold" }}
                   >
-                    NEXT
+                    Next
                   </Button>
                 </Col>
               </Row>

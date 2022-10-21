@@ -5,6 +5,7 @@ import Personal from "./Pages/Personal";
 import Contacts from "./Pages/Contacts";
 import Home from "./Pages/Home";
 import PokemonsDetails from "./Pages/PokemonsDetails";
+import FavoritesList from "./Pages/FavoritesList";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/about" element={<Personal />}></Route>
         <Route path="/contact" element={<Contacts />}></Route>
-
+        <Route path="/favorites" element={<FavoritesList />}></Route>
         <Route path="/details/:namePokemons" element={<PokemonsDetails />}></Route>
 
         <Route path="/" element={<Home />}></Route>

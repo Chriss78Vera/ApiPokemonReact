@@ -14,13 +14,18 @@ import {
   Table,
 } from "react-bootstrap";
 import "../../styles/PokemonDetails.css";
-import { PokemonPostApi } from "../API/mongoApi";
+import { PokemonPostApi} from "../API/mongoApi";
 const PokemonsDetails = () => {
   const { namePokemons } = useParams();
   const pokemonDetails = GetPokemonDetails(namePokemons);
   const { state, data } = pokemonDetails;
   const [postStatus, setPostStatus] = React.useState();
   const postDataPokemon = async () => {
+    let arrayTypes = [
+      data.types.map((p) => ({
+        name: p.type.name,
+      })),
+    ];
     let dataPokemon = [
       {
         name: data.name,
@@ -29,7 +34,9 @@ const PokemonsDetails = () => {
         front_default: data.sprites.other.home.front_default,
         height: data.height,
         weight: data.weight,
-        description: `https://pokeapi.co/api/v2/pokemon/${data.name}`,
+        types: {
+          type: arrayTypes[0],
+        },
       },
     ];
     await PokemonPostApi(dataPokemon);
@@ -40,10 +47,9 @@ const PokemonsDetails = () => {
       <header className="App-header">
         <NavigationBar />
       </header>
-
       <Container>
         {state ? (
-          <Container style={{ marginTop: "4rem" }}>
+          <Container>
             <Alert variant={"danger"}>Pokemon was not found!</Alert>
           </Container>
         ) : (
@@ -64,19 +70,22 @@ const PokemonsDetails = () => {
                       <Col>
                         <h2>{data.name}</h2>
                       </Col>
-                      <Col>
-                        <BsStarFill
+                      <Col  style={{ marginBottom:"1rem"}}>
+                        <Button
+                          variant="dark"
                           onClick={() => {
                             if (!postDataPokemon()) {
                               setPostStatus(true);
-                              console.log(postStatus)
+                              console.log(postStatus);
                             } else {
                               setPostStatus(false);
-                              console.log(postStatus)
+                              console.log(postStatus);
                             }
                           }}
-                          style={{ color: "yellow", fontSize: "30px" }}
-                        />
+                          style={{ width: "20rem" }}
+                        >
+                          Add to favorite!
+                        </Button>
                       </Col>
                     </Row>
                     <Row>
@@ -150,8 +159,8 @@ const PokemonsDetails = () => {
                 </tbody>
               </Table>
             </Container>
-            <Container className="pokemonCenter">
-              <Link variant="primary" to={-1}>
+            <Container className="pokemonCenter"  style={{ marginBottom: "1rem" }}>
+              <Link variant="primary" to={"/"}>
                 <Button variant="dark" style={{ width: "20rem" }}>
                   Back
                 </Button>

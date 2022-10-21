@@ -2,13 +2,16 @@ import { Image } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../images/logo.png"
+import logo from "../../images/logo.png";
 function NavigationBar() {
   return (
     <Navbar expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="/">
-          <Image style={{width: "15rem", height: "3.5rem"}}src={logo}></Image>
+          <Image
+            style={{ width: "15rem", height: "3.5rem" }}
+            src={logo}
+          ></Image>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
@@ -16,6 +19,7 @@ function NavigationBar() {
           id="responsive-navbar-nav"
         >
           <Nav>
+            <Nav.Link href="/favorites">Favorites List</Nav.Link>
             <Nav.Link href="/aboutme">About Me</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>

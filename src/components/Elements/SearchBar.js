@@ -19,7 +19,7 @@ const SearchBar = () => {
         />
 
         <Link variant="primary" to={`/details/${id}`}>
-          <Button variant="dark">SEARCH</Button>
+          <Button variant="dark" style={{ fontWeight: "bold" }}>Search</Button>
         </Link>
       </Form>
     </div>

@@ -24,7 +24,7 @@ export const PokemonMongooseApi = (url) => {
       .get()
       .then((response) => {
         setPokemon({ state: false, data: response.data });
-      
+        console.log(response.data);
       })
       .catch(function (error) {
         if (error.response) {
@@ -50,7 +50,8 @@ export const PokemonMongooseApi = (url) => {
  * @param data - [{
  */
 export const PokemonPostApi = (data) => {
- 
+  let datos=[]
+  data[0].types.type.map((p)=>( datos.push({type:{name:p.name}})))
   axios
     .post("/api/pokemon", {
       _id: data[0].id,
@@ -63,16 +64,14 @@ export const PokemonPostApi = (data) => {
           },
         },
       },
+      types:datos,
       height: data[0].height,
       weight: data[0].weight,
     })
     .then(function (response) {
       console.log(response);
-     
     })
     .catch(function (error) {
-     return error;
+      return error;
     });
-
- 
 };

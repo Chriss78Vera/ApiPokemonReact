@@ -1,6 +1,21 @@
 .pokemon {
     margin-left: 40px;
     margin-bottom: 20px;
-    width: 80%;
-    background-color: transparent
+    margin-top: 1rem;
+    background-color: transparent;
+    text-transform: capitalize;
+
+}
+
+.pokemon-Container {
+    margin-top: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+
+.pokemon-Card {
+    width: 21rem;
+    margin-top: 1rem
 }
