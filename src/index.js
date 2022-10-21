@@ -2,15 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const pokemonRoutes =require('./routes/pokemon')
+
 const app = express();
 const port = process.env.PORT || 9000;
-
-// middleware
 
 app.use(express.json());
 app.use('/api',pokemonRoutes);
 
-//MongoDb Connection=
+//MongoDb Connection
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("Connected to MongoDB"))

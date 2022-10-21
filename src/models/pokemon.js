@@ -1,15 +1,11 @@
 const mongoose = require("mongoose");
 
+/* Creating a schema for the pokemon model. */
 const pokemonSchema = mongoose.Schema({
-  _id:{ type: String, required: true },
+  _id: { type: String, required: true },
   name: { type: String, required: true },
   id: { type: String, required: true },
-  description: { type: String, required: true },
-  // type: [
-  //   {
-  //     type: { name: String },
-  //   },
-  // ],
+  types: {},
   sprites: {
     other: {
       home: {
