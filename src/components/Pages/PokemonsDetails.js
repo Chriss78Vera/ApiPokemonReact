@@ -2,7 +2,6 @@ import React from "react";
 import NavigationBar from "../Elements/Navbar";
 import { Link, useParams } from "react-router-dom";
 import { GetPokemonDetails } from "../API/PokemonApi";
-import { BsStarFill } from "react-icons/bs";
 import {
   Alert,
   Button,
@@ -16,10 +15,15 @@ import {
 import "../../styles/PokemonDetails.css";
 import { PokemonPostApi} from "../API/mongoApi";
 const PokemonsDetails = () => {
+/* Destructuring the data from the API. */
   const { namePokemons } = useParams();
   const pokemonDetails = GetPokemonDetails(namePokemons);
   const { state, data } = pokemonDetails;
   const [postStatus, setPostStatus] = React.useState();
+/**
+ * It takes the data from the API and creates a new object with the data that I want to save in my
+ * database.
+ */
   const postDataPokemon = async () => {
     let arrayTypes = [
       data.types.map((p) => ({

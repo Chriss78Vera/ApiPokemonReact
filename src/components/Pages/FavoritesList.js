@@ -14,6 +14,7 @@ import { PokemonMongooseApi } from "../API/mongoApi";
 import NavigationBar from "../Elements/Navbar";
 import "../../styles/PokemonCard.css";
 const FavoritesList = () => {
+  /* A hook that is used to set the state of the url. */
   const [url, setUrl] = React.useState("/api/pokemon");
   const stateAxios = PokemonMongooseApi(url);
   const { state, data } = stateAxios;

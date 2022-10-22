@@ -6,6 +6,7 @@ import { PokemonApi } from "../API/PokemonApi";
 import "../../styles/PokemonCard.css";
 import { Col, Container, ListGroup, Row } from "react-bootstrap";
 function PokemonCards({ url }) {
+/* Destructuring the state and data from the Api. */
   const stateAxios = PokemonApi(url);
   const { state, data } = stateAxios;
   return (

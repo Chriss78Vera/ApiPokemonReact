@@ -15,7 +15,6 @@ function App() {
         <Route path="/contact" element={<Contacts />}></Route>
         <Route path="/favorites" element={<FavoritesList />}></Route>
         <Route path="/details/:namePokemons" element={<PokemonsDetails />}></Route>
-
         <Route path="/" element={<Home />}></Route>
       </Routes>
     </Router>

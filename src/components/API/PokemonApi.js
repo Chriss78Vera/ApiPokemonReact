@@ -1,6 +1,13 @@
 import axios from "axios";
 import React from "react";
 
+/**
+ * It takes a url as an argument and returns an object with a state and data property. The state
+ * property is a boolean that is true when the data is being fetched and false when the data has been
+ * fetched. The data property is the data that was fetched
+ * @param url - The URL of the API endpoint you want to fetch data from.
+ * @returns An object with two properties: state and data.
+ */
 export const PokemonApi = (url) => {
   const [pokemon, setPokemon] = React.useState({ state: true, data: null });
 
@@ -10,11 +17,9 @@ export const PokemonApi = (url) => {
 
   const getDataPokemon = (url) => {
     setPokemon({ state: true, data: null });
-
     const pokemon_api = axios.create({
       baseURL: url,
     });
-
     pokemon_api
       .get()
       .then((response) => {
@@ -39,6 +44,16 @@ export const PokemonApi = (url) => {
   };
   return pokemon;
 };
+/**
+ * It's a React hook that returns an object with a state and data property.
+ *
+ * The state property is a boolean that is true when the data is being fetched and false when the data
+ * is ready.
+ *
+ * The data property is the data that is returned from the API.
+ * @param namePokemon - The name of the pokemon you want to get the details of.
+ * @returns An object with two properties: state and data.
+ */
 export const GetPokemonDetails = (namePokemon) => {
   const [pokemonDetails, setPokemonDetails] = React.useState({
     state: true,
@@ -50,6 +65,7 @@ export const GetPokemonDetails = (namePokemon) => {
 
   const getDetails = (namePokemon) => {
     setPokemonDetails({ state: true, data: null });
+
     const pokemon_api = axios.create({
       baseURL: `https://pokeapi.co/api/v2/pokemon/${namePokemon}`,
     });
@@ -58,7 +74,6 @@ export const GetPokemonDetails = (namePokemon) => {
       .get()
       .then((response) => {
         setPokemonDetails({ state: false, data: response.data });
-        
       })
       .catch(function (error) {
         if (error.response) {

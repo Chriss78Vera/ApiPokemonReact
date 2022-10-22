@@ -4,6 +4,7 @@ import { PokemonApi } from "../API/PokemonApi";
 import PokemonList from "../PokemonCards/PokemonList";
 import { Button, Col, Container, Row } from "react-bootstrap";
 const Home = () => {
+/* A hook that is used to set the state of the url. */
   const [url, setUrl] = React.useState(
     "https://pokeapi.co/api/v2/pokemon?limit=9&offset=0"
   );
