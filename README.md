@@ -4,11 +4,18 @@
 
 ## Pasos para la creacion
 
-1. **Working area**: Pues como bien dice, el momento en el que estás trabajado. Escribiendo tus cosas, borrando...
-2. **Stagin Area** o **Index**: Oye esto ya me mola, creo que lo debería guardar...
-3. **Commited** o **HEAD**: ¡ Ala guardao !
+1. **Creación del proyecto**: Se crea un proyecto para poderr utilizar JavaScript para el desarollo de la API
+2. **Instalación de dependencias**: Se instala mongoose para la conexion con la base de datos.
+                                    Se instala express y neodeom para correr nuestro proyecto en el puerto elegido
+                                    Se instala swagger para la documentacion de la API
+3. **Creacion del Schema**: Se crean el schema para que los pokemones puedan ser ingresados en la base de mongoDB
+                             
+4. **Creacion de EndPoints**: Se crean las endpoints necesarias para que el front pueda utilizar la base de datos.
+                              - **Get**: Traer los pokemones almacenados en la base de mongoDB y responde en Formato JSON
+                              - **POST**: Inserta pokemones a la base de mongoDB con el schema establecido.
+                              
+![Flujo de Api Rest](https://github.com/Chriss78Vera/ApiPokemonReact/blob/3f9a575bc8df15ce9f9ff3ac702a89caeea5965d/public/ApiRest.png "Flujo de la ApiRest")
 
-![Flujo de trabajo](https://github.com/Chriss78Vera/ApiPokemonReact/blob/3f9a575bc8df15ce9f9ff3ac702a89caeea5965d/public/ApiRest.png "Flujo de trabajo")
 ## Available Scripts
 
 In the project directory, you can run:
