@@ -6,8 +6,8 @@
 
 1. **Creación del proyecto**: 
 ```bash
-npx create-react-app my-app
-cd my-app
+npx create-react-app FrontEnd
+cd FrontEnd
 npm start
 ```
 2. **Instalación de dependencias**: 
@@ -34,7 +34,7 @@ npm start
 
 
 ## Instalación del proyecto
-### Pasos para la instalación de la Api
+### Pasos para la instalación 
 1. **Clonación del proyecto**: Se clona el repositorio.
 2. **Instalación de dependencias:** 
   ```bash
