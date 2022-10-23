@@ -13,14 +13,15 @@
 4. **Creacion de EndPoints**: Se crean las endpoints necesarias para que el front pueda utilizar la base de datos.
   - **Get**: Traer los pokemones almacenados en la base de mongoDB y responde en Formato JSON
   - **POST**: Inserta pokemones a la base de mongoDB con el schema establecido.
-                              
+ 
+5. **Flujo del BackEnd con relación con el FrontEnd**
 ![Flujo de Api Rest](https://github.com/Chriss78Vera/ApiPokemonReact/blob/3f9a575bc8df15ce9f9ff3ac702a89caeea5965d/public/ApiRest.png "Flujo de la ApiRest")
 
-5. **Herramienta Swagger**: Se crea la configuracion para que el proyecto pueda utilizar swagger para documentar la API.
+6. **Herramienta Swagger**: Se crea la configuracion para que el proyecto pueda utilizar swagger para documentar la API.
   - Se establece una ruta para que se pueda encontrar la documentacion: ```localhost:9000/api-doc```
   - Se realiza un schema para mostrar los parametros que utiliza la API.
   - Se realiza la documentacion de cada endpoint que tiene la API.
-  - 
+  
 ## Instalación del proyecto
 ### Pasos para la instalación de la Api
 1. **Clonación del proyecto**: Se clona el repositorio.
