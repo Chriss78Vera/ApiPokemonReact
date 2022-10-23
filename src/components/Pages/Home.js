@@ -20,7 +20,7 @@ const Home = () => {
         {state ? (
           <h1>Cargando....</h1>
         ) : (
-          <Container style={{ marginTop: "20px"}}>
+          <Container style={{ marginTop: "20px", textTransform:"capitalize" }}>
             <PokemonList results={data.results} />
             <Container className="m-auto" style={{ paddingBottom: "20px"}}>
               <Row>

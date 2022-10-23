@@ -20,8 +20,7 @@ function NavigationBar() {
         >
           <Nav>
             <Nav.Link href="/favorites">Favorites List</Nav.Link>
-            <Nav.Link href="/aboutme">About Me</Nav.Link>
-            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Link href="/about">About Me</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

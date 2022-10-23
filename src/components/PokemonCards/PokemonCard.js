@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { PokemonApi } from "../API/PokemonApi";
 import "../../styles/PokemonCard.css";
-import { Col, Container, ListGroup, Row } from "react-bootstrap";
+import { Col, Container, ListGroup, Row, Table } from "react-bootstrap";
+import "../../styles/PokemonCard.css";
 function PokemonCards({ url }) {
-/* Destructuring the state and data from the Api. */
+  /* Destructuring the state and data from the Api. */
   const stateAxios = PokemonApi(url);
   const { state, data } = stateAxios;
   return (
@@ -15,30 +16,41 @@ function PokemonCards({ url }) {
         <></>
       ) : (
         <>
-          <Card className="pokemon">
-            <Card.Header>
-              <Card.Title className="pokemon-title">
-                <Card.Img
-                  variant="top"
-                  src={data.sprites.other.home.front_default}
-                />
-              </Card.Title>
+          <Card className="pokemon-Card">
+            <Card.Header style={{ fontSize: "22px" }}>
+              <Row>
+                <Col xs={12} md={8}>
+                  {data.name}
+                </Col>
+                <Col xs={6} md={4}>
+                  <Link variant="primary" to={`/details/${data.name}`}>
+                    <Button variant="dark">DETAILS</Button>
+                  </Link>
+                </Col>
+              </Row>
             </Card.Header>
-            <Card.Body style={{ fontWeight: "bold", fontSize: "18px" }}>
+            <Card.Img src={data.sprites.other.home.front_default} />
+            <Card.Body>
               <ListGroup>
                 <ListGroup.Item>
-                  <Container>
-                    <Row>
-                      <Col xs={12} md={12} sm={12}>{data.name}</Col>
-                      <Col>
-                        <Link variant="primary" to={`/details/${data.name}`}>
-                          <Button style={{ fontWeight: "bold" }} variant="dark">
-                            Details
-                          </Button>
-                        </Link>
-                      </Col>
-                    </Row>
+                  <Container
+                    style={{
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    Pokemon Type
                   </Container>
+                  <Table striped bordered hover responsive="sm">
+                    <tbody>
+                      <tr>
+                        {data.types.map((tp) => (
+                          <td>
+                            <p>{tp.type.name}</p>
+                          </td>
+                        ))}
+                      </tr>
+                    </tbody>
+                  </Table>
                 </ListGroup.Item>
               </ListGroup>
             </Card.Body>
