@@ -24,11 +24,11 @@
 
 1. **Clonacion del proyecto**: Se clona el repositorio.
 2. **Instalacion de dependencias:** 
-  - ```bash
+  ```bash
   cd ApiPokemon
   git checkout BackEnd
   npm install 
-```
+  ```
 
 ### `npm start`
 
