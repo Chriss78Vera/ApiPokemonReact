@@ -1,8 +1,8 @@
 # ApiPokemonReact - BackEnd 
 
-# Construccion del BackEnd de Pokemon
+# Construcción del BackEnd de Pokemon
 
-## Pasos para la creacion
+## Pasos para la creación de la Api
 
 1. **Creación del proyecto**: Se crea un proyecto para poderr utilizar JavaScript para el desarollo de la API
 2. **Instalación de dependencias**: 
@@ -21,10 +21,10 @@
   - Se realiza un schema para mostrar los parametros que utiliza la API.
   - Se realiza la documentacion de cada endpoint que tiene la API.
 
-## Instalacion del proyecto
+## Instalación del proyecto
 
-1. **Clonacion del proyecto**: Se clona el repositorio.
-2. **Instalacion de dependencias:** 
+1. **Clonación del proyecto**: Se clona el repositorio.
+2. **Instalación de dependencias:** 
   ```bash
   cd ApiPokemon
   git checkout BackEnd
