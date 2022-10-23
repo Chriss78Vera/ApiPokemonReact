@@ -6,9 +6,9 @@
 
 1. **Creación del proyecto**: Se crea un proyecto para poderr utilizar JavaScript para el desarollo de la API
 2. **Instalación de dependencias**: 
-  2.1.  Se instala mongoose para la conexion con la base de datos.
-  2.2.  Se instala express y neodeom para correr nuestro proyecto en el puerto elegido
-  2.3.  Se instala swagger para la documentacion de la API
+2.1.  Se instala mongoose para la conexion con la base de datos.
+2.2.  Se instala express y neodeom para correr nuestro proyecto en el puerto elegido
+2.3.  Se instala swagger para la documentacion de la API
 3. **Creacion del Schema**: Se crean el schema para que los pokemones puedan ser ingresados en la base de mongoDB
                              
 4. **Creacion de EndPoints**: Se crean las endpoints necesarias para que el front pueda utilizar la base de datos.
