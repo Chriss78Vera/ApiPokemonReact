@@ -21,9 +21,8 @@
   - Se realiza un schema para mostrar los parametros que utiliza la API.
   - Se realiza la documentacion de cada endpoint que tiene la API.
   - 
-### Instalación del proyecto
+## Instalación del proyecto
 ### Pasos para la instalación de la Api
-
 1. **Clonación del proyecto**: Se clona el repositorio.
 2. **Instalación de dependencias:** 
   ```bash
