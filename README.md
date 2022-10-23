@@ -11,7 +11,7 @@
   -  Se instala swagger para la documentacion de la API
 3. **Creacion del Schema**: Se crean el schema para que los pokemones puedan ser ingresados en la base de mongoDB.
 4. **Creacion de EndPoints**: Se crean las endpoints necesarias para que el front pueda utilizar la base de datos.
-  - **Get**: Traer los pokemones almacenados en la base de mongoDB y responde en Formato JSON
+  - **GET**: Traer los pokemones almacenados en la base de mongoDB y responde en Formato JSON
   - **POST**: Inserta pokemones a la base de mongoDB con el schema establecido.
  
 5. **Flujo del BackEnd con relación con el FrontEnd**
