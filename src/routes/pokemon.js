@@ -107,7 +107,7 @@ router.get("/pokemon", (req, res) => {
     .find()
     .then((data) => res.json(data))
     .catch((err) => res.json({ message: err.message }));
-  console.log("Lectura de la base");
+  console.log("Get Pokemons ");
 });
 
 module.exports = router;
