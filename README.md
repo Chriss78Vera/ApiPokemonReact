@@ -1,8 +1,8 @@
 # ApiPokemonReact - BackEnd 
 
-# Construcción del BackEnd de Pokemon
+## Construcción del BackEnd de Pokemon
 
-## Pasos para la creación de la Api
+### Pasos para la creación de la Api
 
 1. **Creación del proyecto**: Se crea un proyecto para poderr utilizar JavaScript para el desarollo de la API
 2. **Instalación de dependencias**: 
@@ -20,8 +20,9 @@
   - Se establece una ruta para que se pueda encontrar la documentacion: ```localhost:9000/api-doc```
   - Se realiza un schema para mostrar los parametros que utiliza la API.
   - Se realiza la documentacion de cada endpoint que tiene la API.
-
-## Instalación del proyecto
+  - 
+### Instalación del proyecto
+### Pasos para la instalación de la Api
 
 1. **Clonación del proyecto**: Se clona el repositorio.
 2. **Instalación de dependencias:** 
