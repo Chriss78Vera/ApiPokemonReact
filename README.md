@@ -29,7 +29,7 @@
   git checkout BackEnd
   npm install 
   ```
-3. **Inciamos el proyecto**: 
+3. **Inciamos el proyecto:** 
     ```bash
     npm start
-  ```
+    ```
