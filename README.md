@@ -31,6 +31,6 @@
   npm install 
   ```
 3. **Inciamos el proyecto:** 
-    ```bash
-    npm start
-    ```
+  ```bash
+  npm start
+  ```
