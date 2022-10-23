@@ -15,6 +15,7 @@
   - **POST**: Inserta pokemones a la base de mongoDB con el schema establecido.
                               
 ![Flujo de Api Rest](https://github.com/Chriss78Vera/ApiPokemonReact/blob/3f9a575bc8df15ce9f9ff3ac702a89caeea5965d/public/ApiRest.png "Flujo de la ApiRest")
+
 5. **Herramienta Swagger**: Se crea la configuracion para que el proyecto pueda utilizar swagger para documentar la API.
   - Se establece una ruta para que se pueda encontrar la documentacion: ```localhost:9000/api-doc```
   - Se realiza un schema para mostrar los parametros que utiliza la API.
