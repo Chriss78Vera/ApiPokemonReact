@@ -19,10 +19,16 @@
   - Se establece una ruta para que se pueda encontrar la documentacion: ```localhost:9000/api-doc```
   - Se realiza un schema para mostrar los parametros que utiliza la API.
   - Se realiza la documentacion de cada endpoint que tiene la API.
-  - 
-## Available Scripts
 
-In the project directory, you can run:
+## Instalacion del proyecto
+
+1. **Clonacion del proyecto**: Se clona el repositorio.
+2. **Instalacion de dependencias:** 
+  - ```bash
+  cd ApiPokemon
+  git checkout BackEnd
+  npm install 
+```
 
 ### `npm start`
 
