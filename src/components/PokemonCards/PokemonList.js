@@ -13,7 +13,7 @@ const PokemonList = ({ results }) => {
       </Container>
       <Row>
         {results.map((p) => (
-          <Col xs={12} md={4} sm={6} key={p.name}>
+          <Col key={p.name}>
             <PokemonCards url={p.url} />
           </Col>
         ))}
