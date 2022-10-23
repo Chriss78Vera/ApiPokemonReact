@@ -29,7 +29,7 @@ npm start
     - Se utilizo una URL ```https://pokeapi.co/api/v2/pokemon?limit=9&offset=0``` para mostrar los 10 primeros pokemones. 
     - Se utilizo la URL  ```https://pokeapi.co/api/v2/pokemon/<namepokemon>``` para traer los datos de cada pokemon. 
   - **pokemonapi: ** 
-    - **Get**: Traer los pokemones almacenados en la base de mongoDB con la ruta: ```/api/pokemon```
+    - **GET**: Traer los pokemones almacenados en la base de mongoDB con la ruta: ```/api/pokemon```
     - **POST**: Inserta pokemones a la base de mongoDB con el schema establecido: ```/api/pokemon```
 
 
